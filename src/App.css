@@ -1,0 +1,47 @@
+.App {
+  text-align: left;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.main-content {
+  padding: 40px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.container h1 {
+  color: #343a40;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.container p {
+  color: #6c757d;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container h1 {
+    font-size: 2rem;
+  }
+  
+  .container p {
+    font-size: 1rem;
+  }
+  
+  .main-content {
+    padding: 20px 0;
+  }
+}
+.dropdown-menu {
+  z-index: 2000 !important;
+}

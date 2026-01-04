@@ -1,0 +1,272 @@
+/* Header Styles */
+.header {
+  font-family: 'Arial', sans-serif;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Top Bar */
+.top-bar {
+  background: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+  padding: 8px 0;
+}
+
+.top-bar-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hello-text {
+  color: #6c757d;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.social-icon {
+  color: #6c757d;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #495057;
+}
+
+/* Main Header */
+.main-header {
+  padding: 20px 0;
+  background: white;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.logo-text {
+  font-family: 'Dancing Script', cursive;
+  font-size: 42px;
+  font-weight: 700;
+  color: #4a4a4a;
+  line-height: 1;
+  margin-bottom: 8px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.logo-subtitle {
+  font-size: 11px;
+  font-weight: 600;
+  color: #4a4a4a;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  width: 100%;
+}
+
+/* Navigation */
+.navigation {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-item {
+  position: relative;
+}
+
+
+.nav-link {
+  text-decoration: none;
+  color: #343a40;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 12px 16px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.nav-link:hover {
+  background: #f8f9fa;
+  color: #495057;
+}
+
+.nav-link.active {
+  background: #28a745;
+  color: white;
+}
+
+.chevron {
+  font-size: 10px;
+  margin-left: 2px;
+}
+
+/* Dropdown Menus */
+/* Dropdown Menus */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  list-style: none;
+  margin: 0;
+  padding: 8px 0;
+  min-width: 180px;
+  z-index: 1000;
+  display: none;   /* ✅ hidden by default */
+}
+
+.nav-item.open > .dropdown-menu {
+  display: block;  /* ✅ visible only when parent has "open" */
+}
+
+
+
+.dropdown-menu li {
+  margin: 0;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 8px 16px;
+  color: #343a40;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+  background: #f8f9fa;
+  color: #495057;
+}
+
+/* Search Icon */
+.search-icon {
+  margin-left: 20px;
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #6c757d;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.search-btn:hover {
+  background: #f8f9fa;
+  color: #495057;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .nav-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .nav-link {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+  
+  .logo-text {
+    font-size: 28px;
+  }
+  
+  .social-icons {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .top-bar-content {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .nav-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .nav-link {
+    width: 100%;
+    text-align: center;
+  }
+}
+.nav-item .nav-link {
+  position: relative;
+  z-index: 1100;
+}
+/* Highlight active dropdown link */
+.nav-item.open > .nav-link {
+  background: #28a745;   /* Green background */
+  color: #fff;           /* White text */
+}
+
+/* Show dropdown only when parent has "open" */
+.nav-item .dropdown-menu {
+  display: none;
+}
+
+.nav-item.open .dropdown-menu {
+  display: block;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+/* Smooth fade animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}

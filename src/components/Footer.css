@@ -1,0 +1,86 @@
+
+.footer {
+  background: #fff;
+  font-family: 'Arial', sans-serif;
+  padding-top: 24px;
+  position: relative;
+  text-align: center;
+}
+
+/* Instagram heading */
+.footer-insta h4 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+/* Strong horizontal gallery rules */
+.footer .footer-insta {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 8px;
+}
+
+.footer .footer-insta .insta-gallery {
+  display: flex !important;         /* ensure flex */
+  flex-direction: row !important;   /* horizontal */
+  flex-wrap: nowrap !important;     /* no wrapping */
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  overflow-x: auto;
+  padding: 8px 0;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* firefox */
+}
+
+/* hide scrollbar on webkit */
+.footer .footer-insta .insta-gallery::-webkit-scrollbar {
+  display: none;
+}
+
+/* each item fixed size and won't stretch */
+.footer .footer-insta .insta-item {
+  flex: 0 0 auto;
+  width: 180px;    /* change width if you want larger/smaller images */
+  height: 120px;
+  display: block;
+}
+
+/* make image fill the item box and crop consistently */
+.footer .footer-insta .insta-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+  transition: transform 0.25s ease;
+}
+
+.footer .footer-insta .insta-item img:hover {
+  transform: scale(1.04);
+}
+
+/* Footer bottom (keep existing styles, but scoped) */
+.footer .footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 18px 40px;
+  border-top: 1px solid #eee;
+  flex-wrap: wrap;
+}
+
+/* Mobile responsiveness: allow wrap on very narrow screens */
+@media (max-width: 600px) {
+  .footer .footer-insta .insta-gallery {
+    gap: 8px;
+    padding: 6px 0;
+  }
+
+  .footer .footer-insta .insta-item {
+    width: 140px;
+    height: 100px;
+  }
+}
