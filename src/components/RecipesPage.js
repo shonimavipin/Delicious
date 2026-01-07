@@ -94,7 +94,7 @@ function RecipesPage() {
 
       {result && (
         <div className="card mx-auto mb-4" style={{ maxWidth: 600 }}>
-          <img src={result.imgUrl} alt={result.name} className="card-img-top" onError={e => e.target.src = "https://via.placeholder.com/300x200?text=Image+Not+Found"} />
+          <img src={result.imgUrl} alt={result.name} className="card-img-top" onError={e => e.target.src = "https://delicious-04.onrender.com/300x200?text=Image+Not+Found"} />
           <div className="card-body">
             <h5 className="card-title">{result.name}</h5>
             <p className="card-text">{result.description || "No description available."}</p>
