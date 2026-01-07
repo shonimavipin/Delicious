@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+
 import "./Header.css";
 import {
   FaInstagram,
@@ -66,7 +68,7 @@ const Header = () => {
                   PAGES <span className="chevron">▼</span>
                 </button>
                 <ul className="dropdown-menu">
-                  <li><a href="/Aboutus">About Us</a></li>
+                  <li><Link to="/aboutus">About Us</Link></li>
                   <li><a href="/ContactUsPage">Contact</a></li>
                   <li><a href="/TeamService">Team Service</a></li>
                 </ul>
