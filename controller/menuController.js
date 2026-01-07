@@ -1,5 +1,5 @@
 // controllers/menuController.js
-const MenuItem=require("../models/menuItems");
+const MenuItem=require("../models/menuItem");
 
 exports.getAllMenus = async (req, res) => {
   try {
