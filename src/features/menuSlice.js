@@ -2,8 +2,10 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 // Fetch menu data from your backend
+const API_URL = process.env.REACT_APP_API_URL;
 export const fetchMenu = createAsyncThunk("menu/fetchMenu", async () => {
-  const response = await axios.get("http://localhost:5000/api/menu/");
+ // const response = await axios.get("http://localhost:5000/api/menu/");
+   const response = await axios.get(`${API_URL}/api/menu/`);
   return response.data;
 });
 

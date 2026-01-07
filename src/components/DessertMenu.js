@@ -53,8 +53,8 @@ const DessertMenu = () => {
                 alt={item.name}
                 className="menu-list-image"
                 onError={(e) =>
-                  //(e.target.src = "https://via.placeholder.com/300x200?text=Image+Not+Found")
-                  (e.target.src = "https://delicious-04.onrender.com/300x200?text=Image+Not+Found")
+                  (e.target.src = "https://via.placeholder.com/300x200?text=Image+Not+Found")
+                 
                 }
               />
               <div className="menu-list-details">
