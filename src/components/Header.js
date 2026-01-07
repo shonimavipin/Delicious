@@ -69,8 +69,9 @@ const Header = () => {
                 </button>
                 <ul className="dropdown-menu">
                   <li><Link to="/aboutus">About Us</Link></li>
-                  <li><a href="/ContactUsPage">Contact</a></li>
-                  <li><a href="/TeamService">Team Service</a></li>
+                  <li><Link to="/ContactUsPage">Contact</Link></li>
+                   <li> <Link to="/TeamService">Team Service</Link></li>
+                 
                 </ul>
               </li>
 
@@ -86,21 +87,24 @@ const Header = () => {
                   MEGA MENU <span className="chevron">▼</span>
                 </button>
                 <ul className="dropdown-menu">
-                  <li><a href="/BreakFastMenu">Breakfast</a></li>
-                  <li><a href="/Lunch">Lunch</a></li>
-                  <li><a href="/Dinner">Dinner</a></li>
-                  <li><a href="/DessertMenu">Desserts</a></li>
+                   <li><Link to="/BreakFastMenu">Breakfast</Link></li>
+                    <li><Link to="/Lunch">Lunch</Link></li>
+                     <li><Link to="/Dinner">Dinner</Link></li>
+                     <li><Link to="/DessertMenu">Desserts</Link></li>
+                  
                 </ul>
               </li>
 
               <li className="nav-item">
-                <a href="/RecipePage" className="nav-link">RECEIPIES</a>
+                <Link to="/RecipePage" className="nav-link" >RECEIPIES</Link>
+            
               </li>
               <li className="nav-item">
                 <a href="#" className="nav-link">4 VEGANS</a>
               </li>
               <li className="nav-item">
-                <a href="/ContactUsPage" className="nav-link">CONTACT</a>
+              <Link to="/ContactUsPage" className="nav-link" >CONTACT</Link>
+                
               </li>
             </ul>
           </nav>
